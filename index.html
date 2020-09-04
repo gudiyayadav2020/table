@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table-I</title>
+	<style>
+		h1{
+			color: brown;
+			background-color: lightgreen;
+			border: 4px  dashed green;
+		}
+		body{
+			background-color: lightpink;
+		}
+		.number{
+			color: #6809e6;
+			font-size: 20px;
+		}
+		input{
+			background-color: #9e9e9e59;
+			font-size: 15px
+		}
+	</style>
+
+
+</head>
+<body style="text-align: center;">
+	<h1><center><b>TABLE<b></center></h1><br><br>
+	<form name="form1">
+		<div class="number">Enter number to display table:-
+		<input type="text" name=t1 style="border: 2px solid #607D8B"></div><br><br><br>
+		<input type="button" value="display table" onClick="display()" style="border: 5px solid #607d8b" >
+	</form>
+		<div id="table"></div>
+
+<script>
+	function display() 
+	{
+		var i,a;
+		var answer=document.getElementById("table");
+		
+		a=form1.t1.value
+		for (i=10; i>=1; i--) {
+			
+
+			var newItem = document.createElement("h2");
+			
+			var ans = document.createTextNode(`${a} * ${i} = ${i*a}`);
+			newItem.appendChild(ans);
+			answer.insertBefore(newItem, answer.childNodes[0]);
+				
+			
+
+		}
+	}
+	</script>
+</body>
+</html>
